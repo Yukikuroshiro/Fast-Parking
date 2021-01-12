@@ -1,0 +1,906 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #0F5585;
+    border-radius: 10px;
+    border: solid 2px #00000020;
+    transition: all 0.3s;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #1e75af;
+    border-radius: 10px;
+    border: solid 2px #00000020;
+    cursor: pointer;
+}
+
+.ocultar {
+    display: none;
+}
+
+.visualizar {
+    display: flex;
+}
+
+.visualizarBlock {
+    display: block;
+}
+
+.fullContainer {
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    /* background-color: ivory; */
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    border-bottom: solid 3px #00000020;
+    background-color: #ffffff;
+    position: fixed;
+}
+
+#headerContainer {
+    width: 100vw;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    justify-content: space-between;
+    /* background-color: lightcoral; */
+}
+
+#home {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.wallpaperCover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#mainWallpaper {
+    background-image: url(../../images/wallpaper.png);
+    width: 100vw;
+    min-height: 80vh;
+    overflow: hidden;
+    /* background-color: darkblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#mainWallpaper h1 {
+    font-size: 7vh;
+    color: white;
+    font-weight: 200;
+    text-align: center;
+    user-select: none;
+}
+
+#cmsContainer {
+    width: 100vw;
+    min-height: 30vh;
+    overflow: hidden;
+    /* background-color: aqua; */
+}
+
+#barraDeNavegacao {
+    width: inherit;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0F5585;
+    border-bottom: solid 3px #00000020;
+}
+
+.navegacaoItens {
+    width: 20vw;
+    height: inherit;
+    /* background-color: lawngreen; */
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    user-select: none;
+    transition: all 0.5s;
+}
+
+.navegacaoItens:hover {
+    background-color: #1e75af;
+    cursor: pointer;
+}
+
+.navegacaoItens:active {
+    background-color: #ffffff;
+    transition: all 0.3s;
+}
+
+#entradaContainer {
+    width: 100vw;
+    min-height: 900px;
+    overflow: hidden;
+    /* background-color: brown; */
+}
+
+#entradaWallpaper {
+    background-image: url(../../images/wallpaper_cms.png);
+    width: 100vw;
+    height: 700px;
+    background-attachment: local;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#entradaWallpaper h2 {
+    color: #ffffff;
+    font-size: 5vh;
+    font-weight: 100;
+    text-align: center;
+}
+
+#insertEntrada {
+    min-width: 80vw;
+    overflow: hidden;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.lableEntrada {
+    width: inherit;
+    height: 100px;
+    /* background-color: lawngreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lableEntrada h1 {
+    color: #0F5585;
+    font-size: 3vh;
+    font-weight: 100;
+    width: 40%;
+    height: 50px;
+    /* background-color: khaki; */
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.lableEntrada input {
+    width: 40%;
+    height: 50px;
+    color: #0F5585;
+    font-size: 3vh;
+    font-weight: 100;
+    /* background-color: lightcoral; */
+    outline: none;
+    border: none;
+    /* background: none; */
+    border-bottom: solid 3px #0F5585;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+#insertEntrada button {
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #0F5585;
+    border-radius: 25px;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    outline: none;
+    font-weight: 200;
+    transition: all 0.5s;
+}
+
+#insertEntrada button:hover {
+    background-color: #1e75af;
+    cursor: pointer;
+}
+
+#insertEntrada button:active {
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+.containerCard {
+    width: 100vw;
+    min-height: 50px;
+    overflow: hidden;
+    /* background-color: #1e75af; */
+}
+
+.entradaCard {
+    width: inherit;
+    min-height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: solid 3px #00000090;
+    margin-bottom: 5px;
+    /* background-color: lawngreen; */
+}
+
+.entradaNome,
+.entradaHorario {
+    width: 300px;
+    height: 300px;
+    /* background-color: lightcoral; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.entradaNome h1,
+.entradaHorario h1,
+.entradaNome h2 {
+    font-weight: 200;
+    color: #00000090;
+}
+
+.entradaNome h1 {
+    font-size: 64px;
+}
+
+.entradaNome h2 {
+    font-size: 24px;
+}
+
+.entradaHorario {
+    width: 30vw;
+}
+
+#saidaContainer {
+    width: 100vw;
+    min-height: 300px;
+    overflow: hidden;
+    /* background-color: #1e75af; */
+}
+
+#encontrarRegistros {
+    width: inherit;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    /* background-color: aqua; */
+}
+
+#pesquisarLable {
+    width: 80vw;
+    height: 300px;
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#pesquisarLable h2 {
+    font-weight: 200;
+    font-size: 48px;
+    color: #00000090;
+    text-align: center;
+}
+
+#pesquisarLable input {
+    width: inherit;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 32px;
+    padding: 0 15px;
+    border: solid 1px #00000090;
+    outline: none;
+    color: #0F5585;
+}
+
+#pesquisarLable button {
+    width: 300px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: #0F5585;
+    color: #ffffff;
+    font-size: 26px;
+    transition: all 0.4s;
+}
+
+#pesquisarLable button:hover {
+    background-color: #479cd4;
+    cursor: pointer;
+}
+
+#pesquisarLable button:active {
+    background-color: #fff;
+    transition: all 0.2s;
+}
+
+#saidaCards {
+    width: 100vw;
+    min-height: 50px;
+    overflow: hidden;
+    /* background-color: aqua; */
+}
+
+.saidaCardContainer {
+    width: inherit;
+    min-height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: solid 3px #00000090;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+    /* background-color: lawngreen; */
+}
+
+.saidaNome h1,
+.saidaNome h2,
+.saidaNome h3,
+.saidaNome h6 {
+    font-weight: 200;
+    color: #00000090;
+    display: block;
+}
+
+.saidaNome h1 {
+    font-size: 64px;
+}
+
+.saidaNome h2 {
+    font-size: 24px;
+}
+
+.saidaNome {
+    width: 70vw;
+    height: 300px;
+    /* background-color: lightcoral; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.saidaPreco {
+    width: 300px;
+    height: 200px;
+    /* background-color: lightcoral; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.saidaPreco h1 {
+    color: #00000090;
+    font-weight: 200;
+    font-size: 64px;
+}
+
+.pagarSaida {
+    min-width: 300px;
+    max-width: 450px;
+    overflow: hidden;
+    height: 50px;
+    /* background-color: #0F5585; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagarSaida button {
+    min-width: 200px;
+    max-width: 400px;
+    overflow: hidden;
+    height: 30px;
+    background: none;
+    border: none;
+    background-color: #1e75af;
+    border-radius: 50px;
+    color: #ffffff;
+    border: solid 1px #00000020;
+    transition: all 0.5s;
+}
+
+.pagarSaida button:hover {
+    cursor: pointer;
+    background-color: #479cd4;
+}
+
+.pagarSaida button:active {
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+#usuarios {
+    width: 100vw;
+    min-height: 200px;
+    overflow: auto;
+}
+
+.usuariosContainer {
+    width: 100vw;
+    min-height: 300px;
+    overflow: hidden;
+    /* background-color: #0F5585; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: solid 5px #00000020;
+}
+
+.usuarioOptions{
+    min-width: 45vw;
+    overflow: hidden;
+    min-height: 300px;
+    /* border: solid 3px black; */
+}
+
+.usuarioFoto {
+    min-width: 45vw;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.usuarioIcon img{
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+}
+.usuarioIcon,
+.usuarioNome {
+    min-width: 300px;
+    max-width: 430px;
+    overflow: auto;
+    height: 100%;
+    /* border: solid 2px #0F5585; */
+}
+
+
+.usuarioIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usuarioNome {
+    color: #0F5585;
+    padding: 15px;
+}
+
+.usuarioOptions {
+    display: flex;
+    align-items: flex-end;
+}
+
+.containerOptions {
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.containerOptions img {
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+    transition: all 0.4s;
+    padding: 10px;
+}
+
+.containerOptions img:hover {
+    cursor: pointer;
+    background-color: #479cd4;
+    border-radius: 50px;
+}
+
+#newUser {
+    width: 100vw;
+    min-height: 50px;
+    overflow: hidden;
+}
+
+#new {
+    width: 100vw;
+    height: 50px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+#new button {
+    width: 200px;
+    height: 50px;
+    /* background-color: aqua; */
+    border: none;
+    font-size: 25px;
+    color: #0F5585;
+    transition: all 0.3s;
+    background: none;
+}
+
+#new button:hover {
+    color: #479cd4;
+    cursor: pointer;
+}
+
+#userInsert {
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #0F5585;
+}
+
+.camposInsert,
+.camposEdit {
+    width: 90vw;
+    height: 50px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.camposEdit {
+    width: 50vw;
+    border-bottom: solid 2px #0F558590;
+}
+
+.camposInsert label,
+.camposEdit label {
+    width: 300px;
+    height: inherit;
+    color: #0F5585;
+    /* background-color: #479cd4; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.camposInsert input[type="text"],
+.camposInsert input[type="password"],
+.camposInsert select,
+.camposEdit input[type="text"],
+.camposEdit input[type="password"],
+.camposEdit select {
+    min-width: 60vw;
+    height: inherit;
+    color: #0F5585;
+    /* background-color: #479cd4; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border: none;
+    border-bottom: solid 2px #0F5585;
+}
+
+.camposEdit input[type="text"],
+.camposEdit input[type="password"],
+.camposEdit select {
+    min-width: 25vw;
+    max-width: 40vw;
+    overflow: hidden;
+}
+
+
+.fotoForm {
+    width: auto;
+    height: auto;
+    /* background-color: #0F5585; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enviarFoto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.enviarFoto label{
+    font-size: 14px;
+    width: 250px;
+    height: 40px;
+    background-color: #0F5585;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.enviarFoto label:hover{
+    cursor: pointer;
+    background-color:#479cd4;
+    color: white;
+}
+.enviarFoto label:active{
+    background-color: #ffffff;
+    transition: all 0.5s;
+}
+
+.enviarFoto input[type="file"]{
+    /* background-color: #0F5585; */
+    width: 150px;
+    display: none;
+    /* display: none; */
+}
+.enviarFoto input[type="submit"]{
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.3s;
+}
+.enviarFoto input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #0F5585;
+    color: white;
+}
+.enviarFoto input[type="submit"]:active{
+    background-color: #ffffff;
+    transition: all 0.5s;
+}
+
+
+.buttonEnviar {
+    width: 300px;
+    height: 40px;
+    background-color: #0F5585;
+    color: #ffffff;
+    font-size: 25px;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.buttonEnviar:hover {
+    background-color: #1e75af;
+    cursor: pointer;
+}
+
+.buttonEnviar:active {
+    background-color: #479cd4;
+    transition: all 0.1s;
+}
+
+#users {
+    min-width: 30px;
+    min-height: 30px;
+    overflow: hidden;
+}
+
+#relatorios {
+    width: 100vw;
+    min-height: 850px;
+    overflow: hidden;
+}
+
+#precosContainer {
+    width: 100vw;
+    min-height: 300px;
+    overflow: hidden;
+    border: solid 5px #00000020;
+}
+
+#precoInicial,
+#precoPorHora {
+    min-width: 300px;
+    max-width: 900px;
+    overflow: hidden;
+    height: 75px;
+    /* background-color: #0F5585; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #0F5585;
+    flex-wrap: wrap;
+}
+
+#precoInicial input,
+#precoPorHora input {
+    border: none;
+    height: 50px;
+    font-size: 28px;
+    /* background-color: #1e75af; */
+    padding: 0 5px;
+    color: #0F5585;
+    transition: all 3s;
+}
+
+#precoInicial input:focus,
+#precoPorHora input:focus {
+    border-bottom: solid 2px #0F5585;
+}
+
+#relatorioContainer {
+    width: 100vw;
+    min-height: 50px;
+    overflow: hidden;
+    overflow: hidden;
+    /* background-color: #1e75af; */
+    color: #0F5585;
+    border-bottom: solid 5px #00000020;
+}
+
+#relatorioLabel {
+    width: 100vw;
+    min-height: 280px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#relatorioLabel label {
+    font-size: 24px;
+    text-align: center;
+}
+
+#relatorioLabel input {
+    border: none;
+    font-size: 24px;
+    color: #0F5585;
+    border-bottom: solid 2px #0F5585;
+    width: 50vw;
+}
+
+#tableRelatorio {
+    width: 100vw;
+    min-height: 150px;
+    overflow: hidden;
+}
+
+#tableRelatorio tr {
+    width: 100vw;
+    height: 70px;
+    /* background-color: #1e75af; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tableRelatorio td {
+    width: 33%;
+    height: 70px;
+    /* background-color: #479cd4; */
+    border: solid 2px #0F5585;
+    text-align: center;
+    font-size: 2.7vh;
+}
+
+.firstLine {
+    background-color: #0F5585;
+    color: #ffffff;
+    border: solid #1e75af 1px;
+}
+
+.firstLine td {
+    border: solid 4px #1e75af;
+}
+
+#containerDefault {
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00000070;
+    font-size: 5vh;
+    text-align: center;
+}
+
+#modal {
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    background-color: #00000070;
+    justify-content: center;
+    transition: all 8s;
+}
+
+#modalContainer {
+    width: 80vw;
+    height: 80vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10vh;
+    color: #0F5585;
+}
+
+#modalImg {
+    width: 100%;
+    height: 50px;
+    /* background-color: #0F5585; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+#modalImg img {
+    width: 50px;
+    height: 50px;
+    /* background-color: #0F5585; */
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.excluirEstadia {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 15px;
+}

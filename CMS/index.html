@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>CMS</title>
+</head>
+
+<body>
+    <header>
+        <div id="headerContainer">
+            <img src="../images/fastParking.png" alt="Logo">
+            <a href="../index.html">
+                <img src="../images/home.svg" alt="Home" id="home">
+            </a>
+        </div>
+    </header>
+    <div id="modal" class="ocultar">
+        <div id="modalContainer">
+            <div id="modalImg">
+                <button>
+                    <img src="../images/erase.svg" alt="imagem para fechar" onclick="alert('yo')">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="fullContainer">
+        <div id="mainWallpaper" class="wallpaperCover">
+            <h1>O Melhor estacionamento para você</h1>
+        </div>
+    </div>
+    <div class="fullContainer">
+        <div id="cmsContainer">
+            <div id="barraDeNavegacao">
+                <div class="navegacaoItens" onclick="carregarContainer('dados')">Gerenciamento de Dados</div>
+                <div class="navegacaoItens" onclick="carregarContainer('saida')">Saída</div>
+                <div class="navegacaoItens" onclick="carregarContainer('entrada')">Entrada</div>
+                <div class="navegacaoItens" onclick="carregarContainer('usuarios')">Usuários</div>
+            </div>
+
+
+            <div id="entradaContainer" class="menuItens ocultar">
+                <div id="entradaWallpaper" class="wallpaperCover">
+                    <h2>Gerenciamento de Entrada</h2>
+                    <div id="insertEntrada">
+                        <div class="lableEntrada">
+                            <h1>DIgite a placa do veiculo: </h1>
+                            <input type="text" name="txtEntrada" class=" uppercase" id="placaCliente" required>
+                        </div>
+                        <div class="lableEntrada">
+                            <h1>DIgite o nome do cliente: </h1>
+                            <input type="text" name="txtEntrada" id="entradaNome" required>
+                        </div>
+                        <button onclick="getDados('entrada')">Enviar</button>
+                    </div>
+                </div>
+                <div class="containerCard">
+
+                </div>
+            </div>
+
+            <div id="saidaContainer" class="menuItens ocultar">
+                <div id="encontrarRegistros">
+                    <div id="pesquisarLable">
+                        <h2>Busque registros aqui:</h2>
+                        <input type="text" placeholder="Digite o ID do registro" id="buscarRegistros">
+                        <button onclick="buscarEstadia()">Procurar</button>
+                    </div>
+                </div>
+
+                <div id="saidaCards"></div>
+            </div>
+
+
+            <div id="usuarios" class="menuItens ocultar">
+                <div id="newUser">
+                    <div id="new">
+                    </div>
+                    <div id="userInsert">
+                        <h1>Registro de Usuários</h1>
+                        <div class="camposInsert">
+                            <label>
+                                Digite o nome:
+                            </label>
+                            <input type="text" placeholder="Nome do Usuário" id="userName">
+                        </div>
+                        <div class="camposInsert">
+                            <label>
+                                Digite a senha:
+                            </label>
+                            <input type="password" placeholder="Senha" id="userPassword">
+                        </div>
+                        <div class="camposInsert">
+                            <label>
+                                Nível de Acesso:
+                            </label>
+                            <select id="userLevel">
+                                <option value="0">Nenhum</option>
+                                <option value="1">Entrada</option>
+                                <option value="2">Saída</option>
+                                <option value="3">Administrador</option>
+                            </select>
+                        </div>
+
+                        <button onclick="getDados('usuario')" class="buttonEnviar">
+                            Registrar
+                        </button>
+
+                    </div>
+                </div>
+                <div id="users"></div>
+            </div>
+
+            <div id="relatorios" class="menuItens ocultar">
+                <div id="precosContainer">
+                    <div id="precoInicial">
+                        <h1>Preço inicial R$:</h1>
+                        <input type="text" value="12,00" id="inputPrecoInicial">
+                    </div>
+                    <div id="precoPorHora">
+                        <h1>Preço por hora R$:</h1>
+                        <input type="text" value="6,00" id="inputPrecoHora">
+                    </div>
+                    <button class="buttonEnviar" onclick="atualizarPreco()">Atualizar</button>
+                </div>
+                <div id="relatorioContainer">
+                    <h1>Relatório de ganho</h1>
+                    <div id="relatorioLabel">
+                        <label>Insira a data para ver o relatório:</label>
+                        <input type="text" id="relatorioInput">
+                    </div>
+                    <table id="tableRelatorio">
+                        <tr class="firstLine">
+                            <td>Diário</td>
+                            <td>Mensal</td>
+                            <td>Anual</td>
+                        </tr>
+                        <tr>
+                            <td class="ganhos">R$:00,00</td>
+                            <td class="ganhos">R$:00,00</td>
+                            <td class="ganhos">R$:00,00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="containerDefault" class="menuItens">
+                <h1>Bem vindo ao CMS</h1>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/menu.js"></script>
+</body>
+
+</html>
